@@ -19,7 +19,6 @@ jobs:
           git config --local user.name "迷渡"
           git lfs install
           git lfs track "*.mp4"
-          git add .gitattributes
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
           ./bin/youtube-dl --config-location config.txt
