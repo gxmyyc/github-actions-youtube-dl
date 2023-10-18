@@ -22,6 +22,7 @@ jobs:
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git stash
           git pull --rebase
+          git stash pop
           ./bin/youtube-dl --config-location config.txt
           git add .
           git commit -m "download youtube video"
